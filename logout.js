@@ -7,7 +7,7 @@ $(document).ready(function () {
       success: function (data) {
         if (!data) {
           // Redirect the user to the home page
-          $("body").load("index.php").hide().fadeIn(0);
+          $("body").load("index.php").hide().fadeIn(1500);
         } else {
           var options = {
             distance: "40",
