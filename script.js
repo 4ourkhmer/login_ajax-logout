@@ -16,6 +16,7 @@ $(document).ready(function () {
         },
         success: function (data) {
           if (data) {
+            window.history.pushState("", "", "home.php");
             $("body").load("home.php").hide().fadeIn(1500);
           } else {
             var options = {
@@ -26,7 +27,7 @@ $(document).ready(function () {
             $("#box").effect("shake", options, 800);
             $("#login").val("Login");
             $("#error").html(
-              "<span class='text-danger'>Invalid username or Password</span>"
+              "&#60;span class='text-danger'&#62;Invalid username or Password&#60;/span&#62;"
             );
           }
         },

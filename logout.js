@@ -6,7 +6,7 @@ $(document).ready(function () {
       method: "POST",
       success: function (data) {
         if (!data) {
-          // Redirect the user to the home page
+          window.history.pushState("", "", "index.php");
           $("body").load("index.php").hide().fadeIn(1500);
         } else {
           var options = {
@@ -16,7 +16,7 @@ $(document).ready(function () {
           };
           $("#box").effect("shake", options, 800);
           $("#error").html(
-            "<span class='text-danger'>Invalid username or Password</span>"
+            "&#60;span class='text-danger'&#62;Invalid username or Password&#60;/span&#62;"
           );
         }
       },
